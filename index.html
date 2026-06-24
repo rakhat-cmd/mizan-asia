@@ -633,6 +633,13 @@ src="https://www.facebook.com/tr?id=1327768992265816&ev=PageView&noscript=1"
     });
   });
 
+  // Meta «Donate» оқиғасы — Kaspi садақа батырмалары басылғанда сигнал кетеді
+  document.querySelectorAll('a[href*="pay.kaspi.kz"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (typeof fbq === 'function') fbq('track', 'Donate');
+    });
+  });
+
   // Бет жасырылса/ашылса таймерді қайта іске қос
   document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
