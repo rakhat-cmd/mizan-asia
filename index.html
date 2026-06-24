@@ -606,12 +606,7 @@ src="https://www.facebook.com/tr?id=1327768992265816&ev=PageView&noscript=1"
     startTimer();
   };
 
-  window.sel = function(b) {
-    document.querySelectorAll('.amt').forEach(function(x) { x.classList.remove('on'); });
-    b.classList.add('on');
-  };
-
-  // Жасыл әрқашан 1000-да тұрады (автоматты ауысу өшірілді)
+  // Сома батырмалары статикалық — жасыл әрқашан 1000-да тұрады (sel() мен автоауысу алынды)
 
   // Touch swipe
   var startX = 0;
