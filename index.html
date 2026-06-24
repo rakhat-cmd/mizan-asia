@@ -611,14 +611,7 @@ src="https://www.facebook.com/tr?id=1460086528648917&ev=PageView&noscript=1"
     b.classList.add('on');
   };
 
-  // Сомалар автоматты ауысу
-  var amtBtns = document.querySelectorAll('.amt');
-  var amtIdx = 1;
-  setInterval(function() {
-    amtIdx = (amtIdx + 1) % amtBtns.length;
-    amtBtns.forEach(function(x) { x.classList.remove('on'); });
-    amtBtns[amtIdx].classList.add('on');
-  }, 1500);
+  // Жасыл әрқашан 1000-да тұрады (автоматты ауысу өшірілді)
 
   // Touch swipe
   var startX = 0;
